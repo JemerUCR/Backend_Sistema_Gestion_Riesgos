@@ -18,7 +18,7 @@ class CheckRole
         foreach ($roles as $rol) {
             // Buscar el rol por su nombre en la tabla de roles
             $rolEncontrado = Rol::where('nombre_rol', $rol)->first();
-
+            
             // Verificar si el usuario tiene asignado este rol
             if ($usuario->roles->contains($rolEncontrado)) {
                 // Si tiene el rol permitido, continuamos con la solicitud
